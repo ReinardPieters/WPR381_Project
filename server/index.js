@@ -7,8 +7,9 @@ const path = require('path');
 dotenv.config();
 
 port = process.env.PORT;
+host = process.env.HOST;
 const app = express();
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+app.listen(port, host, () => {
+    console.log(`Server is running at http://${host}:${port}`);
 });
