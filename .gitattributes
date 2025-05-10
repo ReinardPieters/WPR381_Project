@@ -1,2 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+#ignore node_modules folder
+node_modules/
+
+#ignore .env file
+.env
