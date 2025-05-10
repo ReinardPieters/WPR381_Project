@@ -1,7 +1,25 @@
 <%- include('../partials/header') %>
 
+<div class="container text-center mt-5">
+  <h1>Upcoming Events</h1>
+  <p>Check out what's happening soon!</p>
 
-<h1>Upcoming Events</h1>
-<p>Check out what's happening soon!</p>
+  <!-- Loop through the events array -->
+  <div class="row">
+    <% events.forEach(event => { %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="<%= event.image %>" class="card-img-top" alt="<%= event.name %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= event.name %></h5>
+            <p class="card-text"><strong>Location:</strong> <%= event.location %></p>
+            <p class="card-text"><strong>Date:</strong> <%= event.date.toDateString() %></p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>
 
 <%- include('../partials/footer') %>
