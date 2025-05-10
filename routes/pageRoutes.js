@@ -32,7 +32,7 @@ const events = [
 ];
 
 router.get('/', (req, res) => {
-    res.render("pages/home")
+    res.render("pages/home", {events})
 });
 
 router.get('/about', (req, res) => {
