@@ -2,7 +2,7 @@
 
 ## Overview
 
-Starter boilerplate for a Node.js + Express + EJS website.
+Starter boilerplate for a Node.js + Express + EJS website + mongoose + dotenv.
 
 ## Instructions
 
