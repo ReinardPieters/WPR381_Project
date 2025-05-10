@@ -1,7 +1,7 @@
 // routes/pageRoutes.js
-
 const express = require('express');
 const router = express.Router();
+const Contact = require("../models/Contact");
 
 router.get('/', (req, res) => {
     res.render("pages/home")
@@ -21,10 +21,22 @@ router.get('/contact', (req, res) => {
 
 router.post('/contact', (req, res) => {
     const { name, email, message } = req.body;
-
-    console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
     
-    res.redirect('/thankyou');
+    const newContact = new Contact({
+        name,
+        email,
+        message
+    });
+    newContact.save()
+        .then(() => {
+            console.log("Contact saved successfully");
+            res.redirect('/thankyou');
+        })
+        .catch((err) => {
+            console.error("Error saving contact:", err);
+            res.status(500).send("Internal Server Error");
+        });
+
 });
 router.get('/thankyou', (req, res) => {
     res.render("pages/thankyou")
