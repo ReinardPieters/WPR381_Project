@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+<main class="container my-5">
+    <div class="container mt-4">
+        <div class="card">
+            <img src="<%= event.image %>" class="card-img-top" alt="<%= event.name %>" style="max-height: 400px; object-fit: cover;">
+            <div class="card-body">
+            <h2 class="card-title"><%= event.name %></h2>
+            <p><strong>Date:</strong> <%= event.date.toDateString() %></p>
+            <p><strong>Location:</strong> <%= event.location %></p>
+            <p class="card-text"><%= event.about %></p>
+            <a href="/events" class="btn btn-secondary">Back to Events</a>
+            </div>
+        </div>
+    </div>
+</main>
+<%- include('../partials/footer') %>

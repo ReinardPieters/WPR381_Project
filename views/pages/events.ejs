@@ -1,25 +1,56 @@
 <%- include('../partials/header') %>
+<main class="container my-5">
+  <div class="container text-center mt-5">
+    <h1>Upcoming Events</h1>
+    <p>Check out what's happening soon!</p>
 
-<div class="container text-center mt-5">
-  <h1>Upcoming Events</h1>
-  <p>Check out what's happening soon!</p>
+    <form method="GET" action="/events" class="mb-4">
+      <div class="row g-2">
+        <!-- Search Input with Datalist -->
+        <div class="col-md-6">
+          <input type="text" name="search" id="search" list="eventSuggestions" class="form-control" placeholder="Search events..." value="<%= search %>">
+          <datalist id="eventSuggestions">
+            <% events.forEach(event => { %>
+              <option value="<%= event.name %>">
+              <option value="<%= event.location %>">
+            <% }) %>
+          </datalist>
+        </div>
 
-  <!-- Loop through the events array -->
-  <div class="row">
-    <% events.forEach(event => { %>
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="<%= event.image %>" class="card-img-top" alt="<%= event.name %>">
-          <div class="card-body">
-            <h5 class="card-title"><%= event.name %></h5>
-            <p class="card-text"><strong>Location:</strong> <%= event.location %></p>
-            <p class="card-text"><strong>Date:</strong> <%= event.date.toDateString() %></p>
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
+        <!-- Sort Dropdown -->
+        <div class="col-md-4">
+          <select name="sort" class="form-select">
+            <% const selectedSort = typeof sort !== 'undefined' ? sort : 'none'; %>
+            <option value="none" <%= selectedSort === 'none' ? 'selected' : '' %>>Sort by...</option>
+            <option value="date-asc" <%= selectedSort === 'date-asc' ? 'selected' : '' %>>Date (Asceding)</option>
+            <option value="date-desc" <%= selectedSort === 'date-desc' ? 'selected' : '' %>>Date (Decending)</option>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-primary w-100">Apply</button>
         </div>
       </div>
-    <% }) %>
-  </div>
-</div>
+    </form>
 
+
+    <!-- Loop through the events array -->
+    <div class="row">
+      <% events.forEach(event => { %>
+        <div class="col-md-4 mb-4">
+          <div class="card event-card" data-name="<%= event.name.toLowerCase() %>" data-location="<%= event.location.toLowerCase() %>">
+            <img src="<%= event.image %>" class="card-img-top" alt="<%= event.name %>" style="max-height: 250px; object-fit: cover; border-radius: 4px;">
+            <div class="card-body">
+              <h5 class="card-title"><%= event.name %></h5>
+              <p class="card-text"><strong>Location:</strong> <%= event.location %></p>
+              <p class="card-text"><strong>Date:</strong> <%= event.date.toDateString() %></p>
+              <a href="/events/<%= event.id %>" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</main>
 <%- include('../partials/footer') %>
