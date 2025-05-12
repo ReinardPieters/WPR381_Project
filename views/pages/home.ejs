@@ -1,7 +1,25 @@
 <%- include('../partials/header') %>
 
-<h1>Welcome to the Community Portal</h1>
+<div class="hero">
+  <h1>Welcome to Our Community Portal</h1>
+  <p>We're glad you're here! Our portal is under development. Stay tuned for exciting updates.</p>
+</div>
 
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea aspernatur, accusamus asperiores labore voluptatem architecto voluptates necessitatibus atque dolorem, doloribus pariatur autem exercitationem delectus ullam suscipit aliquid rem porro dolore.</p>
+<div class="container">
+  <div class="event-placeholder mt-5 shadow">
+    <h2>Upcoming Events</h2>
+    <% if (upcomingEvents && upcomingEvents.length > 0) { %>
+      <ul class="list-group">
+        <% upcomingEvents.forEach(event => { %>
+          <li class="list-group-item">
+            <strong><%= event.name %></strong> - <%= event.date.toLocaleDateString() %> @ <%= event.location %>
+          </li>
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <p>No upcoming events at the moment. Check back later!</p>
+    <% } %>
+  </div>
+</div>
 
 <%- include('../partials/footer') %>

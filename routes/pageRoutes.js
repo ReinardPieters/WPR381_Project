@@ -40,7 +40,8 @@ const events = [
 ];
 
 router.get('/', (req, res) => {
-  res.render("pages/home")
+  const upcomingEvents = events.slice(0, 3); // Show first 3 events
+  res.render("pages/home", { upcomingEvents });
 });
 
 
