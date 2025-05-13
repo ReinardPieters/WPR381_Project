@@ -36,6 +36,46 @@ const events = [
     location: "City Gallery, 5th Ave.",
     image: "/images/event4.jpg",
     about: "Explore the creativity of local artists at our Art Exhibition. Enjoy a day filled with art, culture, and inspiration. Don't miss the chance to meet the artists and learn about their work."
+  },
+  {
+    id: 5,
+    name: "Skill-Sharing Workshop",
+    date: new Date('2025-06-12'),
+    location: "Community Center, Main St.",
+    image: "",
+    about: "Join in on our fun knowlege sharing experience for learning skills like cooking, coding or crafts",
+  },
+  {
+    id: 6,
+    name: "Financial Literacy Seminar",
+    date: new Date('2025-09-13'),
+    location: "Community Center, Main St.",
+    image: "",
+    about: "Having trouble with finances? Come join our Finance seminar to get tips on how to finance youer money easier",
+  },
+  {
+    id: 7,
+    name: "Cyber Safety Workshop",
+    date: new Date('2025-11-04'),
+    location: "Community Center, Main St.",
+    image: "",
+    about: "Want to know how to dodge cyber hackers or make your devices more safe? Then come on down and join us in our cyber safety workshop.",
+  },
+  {
+    id: 8,
+    name: "Game Night",
+    date: new Date('2025-12-01'),
+    location: "Online/Community Center, Main St.",
+    image: "",
+    about: "Participate in our Game Night, where fun is the name of the game. Feeling shy no worries join the online group on Discord and play with others their",
+  },
+  {
+    id: 9,
+    name: "Photography Contest",
+    date: new Date('2025-07-26'),
+    location: "Onlline",
+    image: "",
+    about: "Clip and share your photos around a theme given to you and 3 other in your team. Best 3 photo's taken of the group will be judged and which ever group gets the most points wins excelent prizes.",
   }
 ];
 
