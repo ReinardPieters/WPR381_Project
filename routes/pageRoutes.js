@@ -45,9 +45,22 @@ router.get('/', (req, res) => {
 });
 
 
-router.get('/about', (req, res) => {
-    res.render("pages/about")
+router.get("/about", (req, res) => {
+  const teamMembers = [
+  { name: "Sarah Johnson", role: "Lead Developer", description: "Passionate about solving problems with code.", photo: "Kemi.jpg" },
+  { name: "Tumi Dlamini", role: "UI/UX Designer", description: "Designs clean and user-friendly interfaces.", photo: "tumi.jpg" },
+  { name: "Sipho Mthembu", role: "Backend Engineer", description: "Ensures the server runs smoothly.", photo: "sipho.jpg" },
+  { name: "Zanele Khumalo", role: "Marketing Lead", description: "Spreads the word and engages the community.", photo: "zanele.jpg" },
+  { name: "Eric Smith", role: "Project Manager", description: "Keeps everyone on track and aligned.", photo: "eric.jpg" },
+  { name: "Nomsa Sithole", role: "QA Tester", description: "Ensures everything works perfectly before launch.", photo: "nomsa.jpg" }
+];
+
+
+  const orgDescription = "We are a dedicated team working together to bring meaningful change to the community through tech, collaboration, and innovation.";
+
+  res.render("pages/about", { teamMembers, orgDescription });
 });
+
 
 router.get('/events', (req, res) => {
   const search = (req.query.search || '').toLowerCase();
