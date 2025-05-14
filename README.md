@@ -48,11 +48,7 @@ _All members contributed to both frontend and backend development._
 2. **Install dependancies.**
    ```bash
    npm install
-3. **Start Developer Server**
-   ```bash
-   npm run dev
-   npm start
-4. **Environment Variables**
+3. **Environment Variables**
    Create a `.env` file in the **root directory** with the following content:
    ```env
    PORT=8080
@@ -61,6 +57,10 @@ _All members contributed to both frontend and backend development._
    ```
    ⚠️ Note: MONGODB_URI is optional — it is used to store contact form submissions in a MongoDB database permamently.
    The server will still run without it, but data will only be stored in the array.
-
+4. **Start Developer Server**
+   ```bash
+   npm run dev
+   *or*
+   npm start
 5. **Open in Browser**
    http://localhost:8080
