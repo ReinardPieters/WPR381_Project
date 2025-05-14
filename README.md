@@ -45,3 +45,16 @@ _All members contributed to both frontend and backend development._
    ```bash
    git clone <https://github.com/ReinardPieters/WPR381_Project>
    cd community-portal
+2. **Install dependancies.**
+   npm install
+3. **Start Developer Server**
+   npm run dev
+   or with node
+   npm start
+4. **Environment Variables**
+   Create a .env file in the root directory with the folowing content
+   PORT=8080
+   HOST=localhost
+   MONGODB_URI=mongodb://localhost:27017/Test 
+5. **Open in Browser**
+   http://localhost:8080
