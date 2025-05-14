@@ -1,25 +1,37 @@
 <%- include('../partials/header') %>
 
-<div class="hero">
-  <h1>Welcome to Our Community Portal</h1>
-  <p>We're glad you're here! Our portal is under development. Stay tuned for exciting updates.</p>
-</div>
+<section class="hero"></section>
 
-<div class="container">
-  <div class="event-placeholder mt-5 shadow">
-    <h2>Upcoming Events</h2>
-    <% if (upcomingEvents && upcomingEvents.length > 0) { %>
-      <ul class="list-group">
-        <% upcomingEvents.forEach(event => { %>
-          <li class="list-group-item">
-            <strong><%= event.name %></strong> - <%= event.date.toLocaleDateString() %> @ <%= event.location %>
-          </li>
-        <% }) %>
-      </ul>
-    <% } else { %>
-      <p>No upcoming events at the moment. Check back later!</p>
-    <% } %>
+<section class="welcome">
+  <div class="container">
+    <h2>Welcome to Our Community</h2>
+    <p>Welcome to our Community Portal — your central hub for connection, collaboration, and growth.</p>
+    <p>We’re proud to provide a space where everyone is valued, heard, and empowered to make a difference. Whether you're a long-time resident, a new member, or simply exploring ways to get involved, this portal is here to keep you informed and engaged.
+    Here, you’ll find updates on upcoming events, local initiatives, volunteer opportunities, and stories that highlight the incredible people who make our community special. We believe that real change begins when we come together — sharing ideas, lending a hand, and celebrating each other's successes.</p>
+
+<p>This platform was built with you in mind — to strengthen bonds, encourage participation, and make it easier to access the support and resources you need. So take a look around, get involved, and help us build a stronger, more connected community.</p>
+
+<p>Together, we thrive. Welcome home.</p>
+
   </div>
-</div>
+</section>
+
+<section class="upcoming-events">
+  <div class="container">
+    <h2>Upcoming Events</h2>
+    <div class="event-list">
+      <% upcomingEvents.forEach(event => { %>
+        <div class="event-card">
+          <img src="<%= event.image %>" alt="<%= event.name %>">
+          <h3><%= event.name %></h3>
+          <p><strong>Date:</strong> <%= event.date.toDateString() %></p>
+          <p><strong>Location:</strong> <%= event.location %></p>
+          
+          <a href="/events/<%= event.id %>" class="btn">Read More</a>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
 
 <%- include('../partials/footer') %>
