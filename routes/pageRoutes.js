@@ -86,14 +86,32 @@ router.get('/', (req, res) => {
 
 
 router.get("/about", (req, res) => {
-  const teamMembers = [
-  { name: "Sarah Johnson", role: "Lead Developer", description: "Passionate about solving problems with code.", photo: "Kemi.jpg" },
-  { name: "Tumi Dlamini", role: "UI/UX Designer", description: "Designs clean and user-friendly interfaces.", photo: "tumi.jpg" },
-  { name: "Sipho Mthembu", role: "Backend Engineer", description: "Ensures the server runs smoothly.", photo: "sipho.jpg" },
-  { name: "Zanele Khumalo", role: "Marketing Lead", description: "Spreads the word and engages the community.", photo: "zanele.jpg" },
-  { name: "Eric Smith", role: "Project Manager", description: "Keeps everyone on track and aligned.", photo: "eric.jpg" },
-  { name: "Nomsa Sithole", role: "QA Tester", description: "Ensures everything works perfectly before launch.", photo: "nomsa.jpg" }
-];
+ const teamMembers = [
+    {
+      name: "Reinard Peters",
+      role: "Backend Developer",
+      description: "Focuses on building reliable server-side logic and database connections.",
+      photo: "Kemi.jpg"
+    },
+    {
+      name: "Kemisetso Pole",
+      role: "Frontend Developer",
+      description: "Crafts seamless, accessible user interfaces that bring the portal to life.",
+      photo: "tumi.jpg"
+    },
+    {
+      name: "Willem Booysen",
+      role: "Data Manager",
+      description: "Manages data integrity and optimizes performance for smooth operations.",
+      photo: "sipho.jpg"
+    },
+    {
+      name: "Glacious Mukwevho",
+      role: "Documentation Manager",
+      description: "Creates clear, structured documentation and ensures effective communication.",
+      photo: "zanele.jpg"
+    }
+  ];
 
 
   const orgDescription = "We are a dedicated team working together to bring meaningful change to the community through tech, collaboration, and innovation.";
