@@ -53,9 +53,11 @@ _All members contributed to both frontend and backend development._
    npm run dev
    npm start
 4. **Environment Variables**
-   Create a .env file in the root directory with the folowing content
+   Create a `.env` file in the **root directory** with the following content:
+   ```env
    PORT=8080
    HOST=localhost
-   MONGODB_URI=mongodb://localhost:27017/Test 
+   MONGODB_URI=mongodb://localhost:27017/Test
+
 5. **Open in Browser**
    http://localhost:8080
