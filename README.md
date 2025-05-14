@@ -1,11 +1,66 @@
-# Community Portal Project
+# 🌐 Community Portal Website
 
-## Overview
+## 📋 Overview
 
-Starter boilerplate for a Node.js + Express + EJS website + mongoose + dotenv.
+The **Community Portal** is a dynamic Node.js web application designed to provide a centralized online space for community engagement. It features structured web pages for community information, events, and communication. Built using Express.js and EJS templating, the portal dynamically renders content and includes a functional contact form for user submissions.
 
-## Instructions
+## 🛠 Technologies Used
 
-1. Run `npm install` to install dependencies.
-2. Use `npm run dev` to start the development server with nodemon.
-3. Add your own route handlers and middleware as needed.
+- **Node.js** (v18+)
+- **Express.js** (v4+)
+- **EJS** (v3+)
+- **Nodemon** (for development)
+- **CSS** and **Bootstrap 5** (optional for styling)
+- **Git & GitHub** (for version control)
+
+## 👥 Team Members and Roles
+
+- **[Your Name]** – Team Lead  
+- **[Reinard Pieters]** – Backend Developer  
+- **[Kemisetso Pole]** – Frontend Developer  
+- **[Willem Booysen]** – Data Manager  
+- **[Glacious Mukwevho]** – Documentation Manager  
+
+_All members contributed to both frontend and backend development._
+## 🖼 Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### About Page
+![About Page](screenshots/about.png)
+
+### Events Page
+![Events Page](screenshots/events.png)
+
+### Contact Form
+![Contact Page](screenshots/contact.png)
+
+### Thank You Confirmation
+![Thank You](screenshots/thankyou.png)
+
+## 🚀 Setup Instructions
+
+1. **Clone the repository:**
+   ```bash
+   git clone <https://github.com/ReinardPieters/WPR381_Project>
+   cd community-portal
+2. **Install dependancies.**
+   ```bash
+   npm install
+3. **Environment Variables**
+   Create a `.env` file in the **root directory** with the following content:
+   ```env
+   PORT=8080
+   HOST=localhost
+   MONGODB_URI=mongodb://localhost:27017/Test
+   ```
+   ⚠️ Note: MONGODB_URI is optional — it is used to store contact form submissions in a MongoDB database permamently.
+   The server will still run without it, but data will only be stored in the array.
+4. **Start Developer Server**
+   ```bash
+   npm run dev
+   *or*
+   npm start
+5. **Open in Browser**
+   http://localhost:8080
