@@ -50,7 +50,7 @@ const events = [
     name: "Financial Literacy Seminar",
     date: new Date('2025-09-13'),
     location: "Community Center, Main St.",
-    image: "/images/enent6",
+    image: "/images/event6",
     about: "Having trouble with finances? Come join our Finance seminar to get tips on how to finance youer money easier",
   },
   {
