@@ -4,12 +4,6 @@ body {
   height: 100%;
   margin: 0;
 }
-.hero {
-  height: 80vh;
-  background: url('/images/communitytest.png') center/cover no-repeat;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-}
 
 .welcome, .upcoming-events {
   margin-top: 0;
@@ -38,7 +32,6 @@ body {
   background: rgb(226, 224, 224);
   padding: 2em;
   border-radius: 10px;
-  width: 200px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
@@ -174,7 +167,10 @@ body {
   font-size: 1.1em;
   line-height: 1.6;
 }
-
+.event-image{
+  height: 300px;
+  object-fit: cover;
+}
 
 
 
