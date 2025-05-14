@@ -139,39 +139,6 @@ body {
   margin: 0 auto;
   font-size: 1.1em;
   color: #555;
-}*/
-
-.team-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2em;
-  margin: 2em 0;
 }
 
-.team-member {
-  background: #f7f7f7;
-  padding: 1.5em;
-  border-radius: 10px;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.team-photo {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 1em;
-}
-
-.organization-info {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2em;
-  text-align: center;
-  font-size: 1.1em;
-  line-height: 1.6;
-}
 

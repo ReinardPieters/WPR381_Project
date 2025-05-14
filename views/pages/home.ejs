@@ -22,7 +22,7 @@
     <div class="event-list">
       <% upcomingEvents.forEach(event => { %>
         <div class="event-card">
-          <img src="<%= event.image %>" alt="<%= event.name %>">
+          <img src="<%= event.image %>" alt="<%= event.name %>" class ="event-image">
           <h3><%= event.name %></h3>
           <p><strong>Date:</strong> <%= event.date.toDateString() %></p>
           <p><strong>Location:</strong> <%= event.location %></p>
