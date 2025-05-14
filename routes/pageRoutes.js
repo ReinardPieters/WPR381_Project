@@ -91,7 +91,7 @@ router.get("/about", (req, res) => {
       name: "Reinard Peters",
       role: "Backend Developer",
       description: "Focuses on building reliable server-side logic and database connections.",
-      photo: "Kemi.jpg"
+      photo: "reinard.jpg"
     },
     {
       name: "Kemisetso Pole",
