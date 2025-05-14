@@ -46,10 +46,11 @@ _All members contributed to both frontend and backend development._
    git clone <https://github.com/ReinardPieters/WPR381_Project>
    cd community-portal
 2. **Install dependancies.**
+   ```bash
    npm install
 3. **Start Developer Server**
+   ```bash
    npm run dev
-   or with node
    npm start
 4. **Environment Variables**
    Create a .env file in the root directory with the folowing content
