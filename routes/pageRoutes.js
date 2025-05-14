@@ -42,7 +42,7 @@ const events = [
     name: "Skill-Sharing Workshop",
     date: new Date('2025-06-12'),
     location: "Community Center, Main St.",
-    image: "",
+    image: "/images/event5.jpg",
     about: "Join in on our fun knowlege sharing experience for learning skills like cooking, coding or crafts",
   },
   {
@@ -50,7 +50,7 @@ const events = [
     name: "Financial Literacy Seminar",
     date: new Date('2025-09-13'),
     location: "Community Center, Main St.",
-    image: "/images/event6",
+    image: "/images/event6.png",
     about: "Having trouble with finances? Come join our Finance seminar to get tips on how to finance youer money easier",
   },
   {
@@ -58,7 +58,7 @@ const events = [
     name: "Cyber Safety Workshop",
     date: new Date('2025-11-04'),
     location: "Community Center, Main St.",
-    image: "",
+    image: "/images/event7.png",
     about: "Want to know how to dodge cyber hackers or make your devices more safe? Then come on down and join us in our cyber safety workshop.",
   },
   {
@@ -66,7 +66,7 @@ const events = [
     name: "Game Night",
     date: new Date('2025-12-01'),
     location: "Online/Community Center, Main St.",
-    image: "",
+    image: "/images/event8.jpg",
     about: "Participate in our Game Night, where fun is the name of the game. Feeling shy no worries join the online group on Discord and play with others their",
   },
   {
@@ -74,7 +74,7 @@ const events = [
     name: "Photography Contest",
     date: new Date('2025-07-26'),
     location: "Onlline",
-    image: "",
+    image: "/images/event9.jpg",
     about: "Clip and share your photos around a theme given to you and 3 other in your team. Best 3 photo's taken of the group will be judged and which ever group gets the most points wins excelent prizes.",
   }
 ];
