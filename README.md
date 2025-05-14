@@ -58,6 +58,9 @@ _All members contributed to both frontend and backend development._
    PORT=8080
    HOST=localhost
    MONGODB_URI=mongodb://localhost:27017/Test
+   ```
+   ⚠️ Note: MONGODB_URI is optional — it is used to store contact form submissions in a MongoDB database permamently.
+   The server will still run without it, but data will only be stored in the array.
 
 5. **Open in Browser**
    http://localhost:8080
